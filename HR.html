@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Salary Calculation</title>
+</head>
+<script>
+    function salcalc(){
+        var Salary = document.getElementById("salary").value;
+        Salary = parseInt(Salary);
+        var Total_salary = Salary + (0.05 * Salary) + (0.08 * Salary);
+        var element = document.getElementById("out_salary");
+        element.innerHTML = Total_salary;
+    }
+
+</script>
+<body>
+    <h1>Salary Calculator</h1>
+    <form>
+        <table>
+            <tr>
+                <td>Enter Basic Salary</td>
+                <td><input type="number" id="salary" placeholder="Salary"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="salcalc()">Calculate Salary</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <h3>The total Salary is:<span id="out_salary"></span></h3>
+</body>
+</html>
