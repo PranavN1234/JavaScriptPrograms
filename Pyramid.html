@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pyramid Generation</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Enter Number:</td>
+                <td><input type="number" placeholder="Enter the amount" id="element"></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="pyramid()">Submit</button></td>
+            </tr>  
+        </table> 
+    </form>
+
+    <h4>The Pattern Generaated is-:</h4>
+
+    <br>
+    <div id="output">
+
+    </div>    
+</body>
+<script>
+        function pyramid(){
+        
+            var N = document.getElementById("element").value;
+            console.log(N);
+            var div =  document.getElementById("output")
+            N = parseInt(N);
+            
+            for(var i=0;i<(N+1);++i){
+                for(var j=N;j<=N+i;++j){
+                    div.insertAdjacentHTML("beforebegin",j);
+                    div.insertAdjacentHTML("beforebegin"," ");
+                }
+                div.insertAdjacentHTML("beforebegin","<br>");
+            }
+        }
+    </script>
+
+</html>
