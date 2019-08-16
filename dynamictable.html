@@ -1,9 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+
+    <title>Dynamic Table</title>
+    <link rel = "stylesheet" type = "text/css" href = "style1.css" />
 </head>
+<style>
+td{
+    padding:10px;
+};
+
+</style>
+<script>
+    function dyntable(){
+        var N = prompt("Enter Number of Rows");
+        N = parseInt(N);
+        
+        HTMLCONTENT = "<table border=\"1\">";
+        
+        for(var i=0;i<N;++i){
+            HTMLCONTENT+="<tr>";
+            HTMLCONTENT+="<td></td><td></td>";
+            HTMLCONTENT+="</tr>";
+        }
+
+        HTMLCONTENT += "</table>";
+
+        var element = document.getElementById("tabledynamic");
+        element.innerHTML = HTMLCONTENT;
+    
+    }
+
+</script>
 <body>
 
+    <form>
+        <table>
+            
+            <tr>
+                <td>
+                    <button type="button" onclick="dyntable()">Create</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+        <br>
+        <br>
+        <div id="tabledynamic">
+            
+        </div>
+
+
 </body>
+
 </html>
