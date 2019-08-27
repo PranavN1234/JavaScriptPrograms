@@ -1,0 +1,50 @@
+<html> 
+<head> 
+ 
+</head> 
+<body> 
+<h1>Bmi Calculator</h1> 
+<div id="form"> <form name="form1" align="center"> 
+<table> 
+<tr> 
+<td>Name:</td> 
+<td><input type="text" name = "p" placeholder="Name"></td> 
+</tr> 
+<tr> 
+<td>Weight:</td> 
+<td><input type="Number" name = "q" placeholder="Weight"></td> </tr> 
+<tr> <td>Height:</td> <td><input type="Number" name = "r" placeholder="Height"></td> </tr> 
+<tr><td><button type = "button" onclick="Bmicalc()">Submit</button> </td></tr> 
+ 
+</table> <span id="output"></span><br> <span id="output1"></span> </form> 
+</div> </body> <style> #output{ text-align: left; float: left; 
+ 
+} 
+#output1
+{ 
+text-align: left; float: left; 
+} 
+</style> 
+ 
+<script> 
+function Bmicalc(){ 
+var h=document.form1.p.value; 
+var y=document.form1.q.value; 
+var n=document.form1.r.value; 
+var x=document.getElementById("output"); 
+var t=document.getElementById("output1"); 
+n=n/100; 
+var BMI = y/(n*n); x.innerHTML="Bmi is "+BMI; 
+if (BMI<20) 
+  t.innerHTML="Underweight"; 
+else if(BMI>20 && BMI<25) 
+  t.innerHTML="Fit" 
+else if(BMI>25 && BMI<30) 
+  t.innerHTML="Overweight" 
+else if(BMI>30) t.innerHTML="Obese" 
+ 
+} 
+ 
+</script> </html> 
+ 
+ 
